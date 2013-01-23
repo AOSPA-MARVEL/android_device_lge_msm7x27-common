@@ -396,7 +396,7 @@ CameraHAL_GetCam_Info(int camera_id, struct camera_info *info)
    bool dynamic = false;
    ALOGV("CameraHAL_GetCam_Info:\n");
    void *libcameraHandle = ::dlopen("libcamera.so", RTLD_NOW);
-   ALOGD("CameraHAL_GetNum_Cameras: loading libcamera at %p", libcameraHandle);
+   ALOGD("CameraHAL_GetCam_Info: loading libcamera at %p", libcameraHandle);
    if (!libcameraHandle) {
        ALOGE("FATAL ERROR: could not dlopen libcamera.so: %s", dlerror());
        return EINVAL;
